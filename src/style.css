@@ -575,32 +575,208 @@ html.lenis body {
 }
 
 /* About Section Grid */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 3rem;
-  align-items: start;
+/* ==========================================================================
+   About Section (editorial layout)
+   ========================================================================== */
+.section-about {
+  padding: 6.5rem 6rem 4.5rem;
+  background: rgba(0, 0, 0, 0.35);
 }
 
-.about-bio {
+.ab-wrap {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: minmax(0, 712fr) minmax(0, 533fr);
+  column-gap: clamp(3rem, 6.5vw, 6.3rem);
+  height: min(813px, calc(100vh - 11rem));
+  min-height: 640px;
+}
+
+/* ---- Left column ---- */
+.ab-left {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: var(--text-muted);
+  min-width: 0;
 }
 
-.about-bio .highlight-p {
-  color: #ffffff;
-  font-size: 1.15rem;
+.ab-top {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ab-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ab-main {
+  margin-top: clamp(2.5rem, 9vh, 8rem);
+}
+
+.ab-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.6rem;
+}
+
+.ab-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.6rem, 4.6vw, 4.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+  margin-bottom: 2.2rem;
+}
+
+.ab-title em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
   font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0;
 }
 
-.about-bio strong {
-  color: #ffffff;
-  font-weight: 600;
+.ab-text {
+  max-width: 600px;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1.8rem;
 }
+
+.ab-pillars {
+  display: grid;
+  grid-template-columns: 238fr 206fr 238fr;
+  gap: 0.9rem;
+  margin-top: 2.2rem;
+}
+
+.ab-pillar {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 1.2rem 1.5rem 1.1rem;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.ab-pillar:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.ab-pillar-num {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ab-pillar h3 {
+  margin-top: 0.8rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ab-pillar i {
+  display: block;
+  width: 36px;
+  height: 1px;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ab-bottom {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ab-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.ab-more:hover {
+  color: #fff;
+}
+
+.ab-more svg {
+  transition: transform 0.25s ease;
+}
+
+.ab-more:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* ---- Right column: photo ---- */
+.ab-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ab-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+.ab-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%);
+  pointer-events: none;
+}
+
+.ab-photo figcaption {
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.ab-cap-bar {
+  width: 1px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
 
 .edu-badge {
   display: flex;
@@ -959,4 +1135,24 @@ html.lenis body {
   .contact-links-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+@media (max-width: 1100px) {
+  .section-about { padding: 6rem 2.5rem 4rem; }
+  .ab-wrap {
+    grid-template-columns: 1fr;
+    height: auto;
+    row-gap: 3rem;
+  }
+  .ab-bottom { margin-top: 3rem; }
+  .ab-photo { aspect-ratio: 4 / 5; max-width: 560px; }
+}
+
+@media (max-width: 768px) {
+  .section-about { padding: 5.5rem 1.5rem 3rem; }
+  .ab-pillars { grid-template-columns: 1fr; }
+  .ab-bottom { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .ab-more { padding-left: 0; border-left: none; }
+  .ab-photo figcaption { left: 1.5rem; bottom: 1.5rem; }
 }

@@ -148,6 +148,14 @@ function scrollToSection(targetId) {
   }
 }
 
+document.querySelectorAll('[data-scroll]').forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollToSection(el.dataset.scroll);
+  });
+});
+
+
 // Nav link clicks
 navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
