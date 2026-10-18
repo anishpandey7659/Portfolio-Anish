@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anish Pandey — AI Engineer</title>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="loader" class="loader">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">
+          <span class="loader-title">LOADING ASSETS</span>
+          <span id="loader-progress" class="loader-percent">0%</span>
+        </div>
+        <div class="loader-bar-bg">
+          <div id="loader-bar" class="loader-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed Header / Navigation Bar -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#hero" class="nav-logo" data-nav="hero" aria-label="Anish Pandey Home">
+          <img src="/Asset/ap_logo.png" alt="AP" class="logo-image" />
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <button class="nav-link active" data-target="hero">HOME</button>
+          <button class="nav-link" data-target="about">ABOUT</button>
+          <button class="nav-link" data-target="projects">PROJECTS</button>
+          <button class="nav-link" data-target="skills">SKILLS</button>
+          <button class="nav-link" data-target="contact">CONTACT</button>
+        </nav>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Natural Scrolling Page Content -->
+    <main class="site-main">
+      <!-- 1. HERO SECTION (100% Match to portfolio_desgin.png with continuous cinematic video) -->
+      <section class="hero-section" id="hero">
+        <!-- Hero Background Video & Vignette -->
+        <div class="hero-video-bg">
+          <video
+            id="hero-bg-video"
+            class="hero-bg-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+          >
+            <source src="/Asset/hero_background.webm" type="video/webm" />
+            <source src="/Asset/hero_video.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-vignette"></div>
+        </div>
+
+        <!-- Hero Content Layer -->
+        <div class="hero-content-wrapper">
+          <!-- Hero Left Content -->
+          <div class="hero-left">
+            <span class="hero-eyebrow">HI, I'M</span>
+            <h1 class="hero-name">Anish Pandey</h1>
+            <h2 class="hero-role">AI ENGINEER</h2>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">
+              I build intelligent AI agents and LLM-powered solutions, turning complex problems into scalable, real-world applications.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-outline" id="btn-hero-projects">
+                VIEW PROJECTS
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a
+                href="https://drive.google.com/file/d/1wX2LBXpekmLOwetE0qiwRrjwCRoOKy3q/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-dashed"
+                id="btn-hero-resume"
+              >
+                VIEW RESUME
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Side Tagline -->
+          <div class="hero-right">
+            <div class="hero-tagline-bar"></div>
+            <div class="hero-tagline-text">
+              <span>BETTER</span>
+              <span>SYSTEMS</span>
+              <span>FOR A</span>
+              <span>BRIGHTER</span>
+              <span>TOMORROW</span>
+            </div>
+          </div>
+
+          <!-- Hero Bottom Left: Scroll Indicator -->
+          <div class="hero-bottom-left" id="hero-scroll-btn">
+            <div class="scroll-tick"></div>
+            <span class="scroll-label">SCROLL</span>
+            <svg class="scroll-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </div>
+
+          <!-- Hero Bottom Right: Social Icons -->
+          <div class="hero-bottom-right">
+            <a href="https://github.com/anishpandey7659" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <span class="social-divider">|</span>
+            <a href="https://www.linkedin.com/in/anish-pandey-9235a32a6/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46V10.9M7.86 6.54a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/NigeshAnna" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="mailto:anishpandey1232@gmail.com" class="social-icon" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. ABOUT SECTION -->
+      <section class="page-section section-about" id="about">
+        <div class="panel-card about-card">
+          <div class="panel-header">
+            <span class="section-tag">01 / ABOUT</span>
+            <h2 class="panel-title">Engineering Autonomous AI with Deterministic Control</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-bio">
+              <p class="highlight-p">
+                I am an <strong>AI Engineer</strong> specializing in Agentic AI Systems, LLM Applications, and Production-Grade GenAI Solutions.
+              </p>
+              <p>
+                My focus centers on designing intelligent agent workflows, structured tool calling, deterministic guardrails, and hybrid RAG architectures. Rather than probabilistic guesses, I architect autonomous systems with mathematically grounded confidence gates and end-to-end telemetry.
+              </p>
+              <div class="edu-badge">
+                <div class="edu-icon">🎓</div>
+                <div class="edu-text">
+                  <span class="edu-degree">B.Sc. in Computer Science & Information Technology (CSIT)</span>
+                  <span class="edu-inst">Tribhuvan University, Nepal • Expected 2028</span>
+                </div>
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Deterministic Safety Rails</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Production AI Architectures</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">24fps</span>
+                <span class="stat-label">Cinematic Dynamics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PROJECTS SECTION -->
+      <section class="page-section section-projects" id="projects">
+        <div class="panel-card projects-card">
+          <div class="panel-header">
+            <span class="section-tag">02 / FEATURED PROJECTS</span>
+            <h2 class="panel-title">Selected Production Architectures</h2>
+          </div>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-box">
+              <div class="project-top">
+                <span class="project-num">01</span>
+                <a href="https://github.com/anishpandey7659/Arxiv-Copilot" target="_blank" rel="noopener noreferrer" class="project-gh-link" aria-label="GitHub Repository">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+              <h3 class="project-title">ArXiv Copilot</h3>
+              <p class="project-sub">Agentic Academic Research Assistant</p>
+              <p class="project-desc">
+                End-to-End RAG with Docling academic PDF parsing, OpenSearch hybrid retrieval (BM25 + Dense vector search), multi-layer guardrails, and full telemetry via Langfuse & Logfire.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>OpenSearch</span>
+                <span>Docling</span>
+                <span>Langfuse</span>
+                <span>LiteLLM</span>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-box">
+              <div class="project-top">
+                <span class="project-num">02</span>
+                <a href="https://github.com/anishpandey7659/JobPilot" target="_blank" rel="noopener noreferrer" class="project-gh-link" aria-label="GitHub Repository">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+              <h3 class="project-title">JobPilot AI</h3>
+              <p class="project-sub">Multi-Node LangGraph Match Agent</p>
+              <p class="project-desc">
+                Multi-mode unified state machine that performs job discovery, candidate profile relevance scoring, self-correcting query reformulation loops, and strictly verified resume tailoring.
+              </p>
+              <div class="project-tags">
+                <span>LangGraph</span>
+                <span>Python</span>
+                <span>Langfuse</span>
+                <span>Pydantic</span>
+                <span>LLM APIs</span>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-box">
+              <div class="project-top">
+                <span class="project-num">03</span>
+                <span class="project-badge">Research Simulation</span>
+              </div>
+              <h3 class="project-title">ReturnGuard</h3>
+              <p class="project-sub">Governed Multi-Agent AI Returns System</p>
+              <p class="project-desc">
+                Local multi-agent architecture with deterministic governance gates, hard-coded fraud thresholds, multimodal damage screening, and append-only cryptographic hash-chained audit logging.
+              </p>
+              <div class="project-tags">
+                <span>Multi-Agent</span>
+                <span>Docker</span>
+                <span>Vision LLM</span>
+                <span>Audit Ledger</span>
+                <span>Python</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SKILLS SECTION -->
+      <section class="page-section section-skills" id="skills">
+        <div class="panel-card skills-card">
+          <div class="panel-header">
+            <span class="section-tag">03 / CAPABILITIES</span>
+            <h2 class="panel-title">Technical Skills & Tooling</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <div class="skill-cat-header">
+                <span class="skill-cat-dot"></span>
+                <h4>Agentic AI & Orchestration</h4>
+              </div>
+              <div class="skill-badges">
+                <span class="badge">LangChain</span>
+                <span class="badge">LangGraph</span>
+                <span class="badge">LiteLLM</span>
+                <span class="badge">Agentic RAG</span>
+                <span class="badge">Multi-Agent Systems</span>
+                <span class="badge">Langfuse</span>
+                <span class="badge">DeepEval</span>
+                <span class="badge">Logfire</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-cat-header">
+                <span class="skill-cat-dot"></span>
+                <h4>RAG & Vector Stores</h4>
+              </div>
+              <div class="skill-badges">
+                <span class="badge">OpenSearch</span>
+                <span class="badge">Hybrid Search (BM25)</span>
+                <span class="badge">Vector Embeddings</span>
+                <span class="badge">Pinecone</span>
+                <span class="badge">FAISS</span>
+                <span class="badge">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-cat-header">
+                <span class="skill-cat-dot"></span>
+                <h4>Backend & Engineering</h4>
+              </div>
+              <div class="skill-badges">
+                <span class="badge">Python</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">Pydantic</span>
+                <span class="badge">SQLAlchemy</span>
+                <span class="badge">AsyncIO</span>
+                <span class="badge">RESTful APIs</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-cat-header">
+                <span class="skill-cat-dot"></span>
+                <h4>DevOps & Environments</h4>
+              </div>
+              <div class="skill-badges">
+                <span class="badge">Docker</span>
+                <span class="badge">Docker Compose</span>
+                <span class="badge">Linux / Bash</span>
+                <span class="badge">Git & GitHub</span>
+                <span class="badge">CI/CD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CONTACT SECTION -->
+      <section class="page-section section-contact" id="contact">
+        <div class="panel-card contact-card">
+          <div class="panel-header">
+            <span class="section-tag">04 / CONNECT</span>
+            <h2 class="panel-title">Let's Build Something Exceptional</h2>
+          </div>
+          <p class="contact-lead">
+            Available for AI engineering projects, multi-agent architectures, and production-ready GenAI implementations.
+          </p>
+          <div class="contact-links-grid">
+            <a href="mailto:anishpandey1232@gmail.com" class="contact-link-tile">
+              <div class="tile-icon">✉️</div>
+              <div class="tile-info">
+                <span class="tile-title">Email Direct</span>
+                <span class="tile-val">anishpandey1232@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/anishpandey7" target="_blank" rel="noopener noreferrer" class="contact-link-tile">
+              <div class="tile-icon">💼</div>
+              <div class="tile-info">
+                <span class="tile-title">LinkedIn</span>
+                <span class="tile-val">linkedin.com/in/anishpandey7</span>
+              </div>
+            </a>
+            <a href="https://github.com/anishpandey7659" target="_blank" rel="noopener noreferrer" class="contact-link-tile">
+              <div class="tile-icon">💻</div>
+              <div class="tile-info">
+                <span class="tile-title">GitHub</span>
+                <span class="tile-val">github.com/anishpandey7659</span>
+              </div>
+            </a>
+            <div class="contact-link-tile no-hover">
+              <div class="tile-icon">📍</div>
+              <div class="tile-info">
+                <span class="tile-title">Location</span>
+                <span class="tile-val">Nepal (UTC+05:45)</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-footer-note">
+            <span>© 2026 Anish Pandey. All rights reserved.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
