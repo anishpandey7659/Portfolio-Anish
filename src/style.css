@@ -1476,7 +1476,7 @@ html.lenis body {
 .section-contact {
   position: relative;
   min-height: auto;    
-  padding: 8.5rem 5.5rem 5rem;
+  padding: 7.5rem 5.5rem 7rem;
   background: transparent;
 }
 
@@ -1776,42 +1776,15 @@ html.lenis body {
   margin-top: 3rem;
 }
 
-
 /* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
   position: relative;
   z-index: 2;
-  padding: 4rem 5.5rem 3rem;
-  overflow: hidden;
-  background: #030303;
-  isolation: isolate;
-}
-
-/* Blurred streak background (reuses the frame your body already uses) */
-.site-footer::before {
-  content: '';
-  position: absolute;
-  inset: -40px;
-  z-index: -2;
-  background: url('/frames_webp/frame_000001.webp') center / cover no-repeat;
-  filter: grayscale(100%) blur(8px) brightness(0.7) contrast(1.15);
-  transform: scale(1.1);
-}
-
-/* Dark overlay so text stays readable */
-.site-footer::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(3, 3, 3, 0.9) 0%,
-    rgba(3, 3, 3, 0.35) 40%,
-    rgba(3, 3, 3, 0.75) 100%
-  );
+  padding: 3.5rem 5.5rem 2.2rem;
+  background: #070707;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .ft-wrap {
@@ -1822,106 +1795,134 @@ html.lenis body {
 
 .ft-grid {
   display: grid;
-  /* grid-template-columns: 461fr 363fr 465fr 230fr; */
-  grid-template-columns: 1.1fr 0.75fr 1.15fr 0.8fr;
-  column-gap: 2.5rem;
+  grid-template-columns: 1.25fr 0.85fr 0.85fr 1.2fr;
+  column-gap: 3rem;
   align-items: start;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
-.ft-col {
-  min-width: 0;
-}
+.ft-col { min-width: 0; }
 
 .ft-label {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.34em;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2.4rem;
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.38em;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0.9rem 0 2.2rem;
 }
 
 /* ---- Column 1 ---- */
+.ft-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin-bottom: 0.4rem;
+}
+
 .ft-name {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(2.2rem, 3vw, 2.9rem);
-  letter-spacing: 0.01em;
+  font-size: clamp(2.4rem, 3.4vw, 3.3rem);
+  line-height: 1.1;
   color: #fff;
-  margin-bottom: 0.8rem;
 }
 
 .ft-role {
-  font-size: 0.85rem;
+  margin-top: 0.9rem;
+  font-size: 0.74rem;
   letter-spacing: 0.34em;
   color: rgba(255, 255, 255, 0.85);
 }
 
 .ft-underline {
   display: block;
-  width: 56px;
-  height: 2px;
+  width: 48px;
+  height: 1px;
+  margin: 1.2rem 0 1.4rem;
   background: #fff;
-  margin: 1.1rem 0 2rem;
 }
 
 .ft-bio {
-  font-size: 0.92rem;
-  line-height: 1.85;
-  letter-spacing: 0.05em;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ---- Column 2 ---- */
-.ft-links {
-  list-style: none;
-  max-width: 230px;
+.ft-open {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.ft-links li + li {
-  margin-top: 1.5rem;
+.ft-open i {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
 }
+
+.ft-open i::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #fff;
+  animation: ftPulse 2s ease-in-out infinite;
+}
+
+@keyframes ftPulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* ---- Column 2: explore ---- */
+.ft-links {
+  list-style: none;
+  max-width: 210px;
+}
+
+.ft-links li + li { margin-top: 1.45rem; }
 
 .ft-links a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.98rem;
-  letter-spacing: 0.04em;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
   color: #fff;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-.ft-links a:hover {
-  opacity: 0.7;
-}
+.ft-links a:hover { opacity: 0.7; }
+.ft-links svg { transition: transform 0.25s ease; }
+.ft-links a:hover svg { transform: translateX(4px); }
 
-.ft-links svg {
-  transition: transform 0.25s ease;
-}
-
-.ft-links a:hover svg {
-  transform: translateX(4px);
-}
-
-/* ---- Column 3 ---- */
+/* ---- Column 3: connect ---- */
 .ft-contact {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.7rem;
 }
 
 .ft-contact li {
   display: flex;
   align-items: center;
-  gap: 1.7rem;
+  gap: 1.3rem;
 }
 
 .ft-contact svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
   fill: none;
   stroke: #fff;
@@ -1930,71 +1931,50 @@ html.lenis body {
   stroke-linejoin: round;
 }
 
-.ft-contact svg.ft-fill {
-  fill: #fff;
-  stroke: none;
-}
+.ft-contact svg.ft-fill { fill: #fff; stroke: none; }
 
 .ft-contact div {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.2rem;
   min-width: 0;
 }
 
 .ft-contact span {
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   font-weight: 500;
   letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
 }
 
-.ft-contact a,
-.ft-contact p {
-  font-size: 0.9rem;
+.ft-contact a {
+  font-size: 0.88rem;
+  font-weight: 300;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   overflow-wrap: anywhere;
   transition: color 0.2s ease;
 }
 
-.ft-contact a:hover {
-  color: #fff;
-}
+.ft-contact a:hover { color: #fff; }
 
-/* ---- Column 4 ---- */
-.ft-social {
-  display: flex;
-  align-items: center;
-  gap: 1.3rem;
-  margin-bottom: 3.4rem;
-}
-
-.ft-social a {
-  display: flex;
-  color: #fff;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.ft-social a:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
-
-.ft-social i {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.ft-tagline {
-  padding-left: 1.6rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.7);
-  font-size: 0.7rem;
+/* ---- Column 4: statement ---- */
+.ft-big {
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 200;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+  line-height: 1.35;
   letter-spacing: 0.3em;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ft-net {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin-top: 2.2rem;
 }
 
 /* ---- Bottom bar ---- */
@@ -2002,34 +1982,30 @@ html.lenis body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  font-size: 0.85rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.78rem;
+  font-weight: 300;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .ft-top {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  gap: 0.9rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  letter-spacing: 0.1em;
   transition: color 0.2s ease;
 }
 
-.ft-top:hover {
-  color: #fff;
-}
+.ft-top:hover { color: #fff; }
+.ft-top svg { transition: transform 0.25s ease; }
+.ft-top:hover svg { transform: translateY(-3px); }
 
-.ft-top svg {
-  transition: transform 0.25s ease;
-}
 
-.ft-top:hover svg {
-  transform: translateY(-3px);
-}
 
 /* ==========================================================================
    Responsive Breakpoints
@@ -2199,16 +2175,17 @@ html.lenis body {
 
 /* SECTION FOOTER ======================================================= */
 @media (max-width: 1100px) {
-  .site-footer { padding: 6rem 2.5rem 2.5rem; }
+  .site-footer { padding: 3rem 2.5rem 2rem; }
   .ft-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 3.5rem;
+    row-gap: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .site-footer { padding: 5rem 1.25rem 2rem; }
-  .ft-grid { grid-template-columns: 1fr; row-gap: 3rem; }
+  .site-footer { padding: 2.5rem 1.25rem 1.5rem; }
+  .ft-grid { grid-template-columns: 1fr; row-gap: 2.5rem; }
   .ft-links { max-width: none; }
-  .ft-bottom { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .ft-big { letter-spacing: 0.2em; }
+  .ft-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
