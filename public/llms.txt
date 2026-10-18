@@ -1,0 +1,161 @@
+# Anish Pandey — AI Engineer Portfolio
+
+> AI Engineer focused on Agentic AI, LLM applications, retrieval-augmented generation (RAG), and scalable software systems.
+
+This portfolio showcases my technical skills, AI engineering projects, software engineering foundations, and approach to building practical, reliable, real-world systems.
+
+## About Me
+
+I'm an AI engineer focused on building practical, scalable systems. I work across agentic AI and LLM applications, turning complex problems into reliable solutions with autonomous agents, RAG pipelines, and multi-agent workflows.
+
+I care about clean architecture, production-ready code, and learning by building.
+
+## Technologies I Build With
+
+A strong foundation in modern technologies, frameworks, and tools to build scalable, intelligent, and real-world solutions.
+
+### Languages
+
+- Python
+- C++
+- JavaScript
+
+### Agentic AI and LLM Frameworks
+
+- LangChain
+- LangGraph
+- LLM Agents
+- Multi-Agent Systems
+- Model Context Protocol (MCP)
+- LiteLLM
+- Langfuse
+- DeepEval
+
+### Backend and API Development
+
+- FastAPI
+- Django
+- Django REST Framework (DRF)
+- SQLAlchemy
+- Pydantic
+- AsyncIO
+- REST APIs
+- API Integration
+- Authentication and Authorization
+
+### RAG and AI Systems
+
+- Retrieval-Augmented Generation (RAG)
+- Advanced RAG
+- Hybrid Search
+- Semantic Search
+- Embeddings
+- Reranking
+- Vector Search
+- Prompt Engineering
+- LLM Evaluation
+- AI Guardrails
+
+### Databases and Search Engines
+
+- PostgreSQL
+- SQLite
+- Redis
+- OpenSearch
+- Pinecone
+- FAISS
+- Vector Databases
+- Database Query Optimization
+
+### Machine Learning and Deep Learning
+
+- PyTorch
+- Scikit-learn
+- TensorFlow
+- Neural Networks
+- Convolutional Neural Networks (CNNs)
+- Recurrent Neural Networks (RNNs)
+- Long Short-Term Memory Networks (LSTMs)
+- Transformers
+- Model Evaluation
+
+### Tools and DevOps
+
+- Docker
+- Docker Compose
+- Git
+- GitHub
+- Linux
+- CI/CD
+- GitHub Actions
+- Environment and Dependency Management
+
+### Software Engineering
+
+- Object-Oriented Programming (OOP)
+- Data Structures and Algorithms
+- Database Design
+- System Design Fundamentals
+- Error Handling
+- Logging
+- Testing and Debugging
+
+## Featured Projects
+
+### 1. ArXiv Copilot — Agentic Research Assistant
+
+- Repository: https://github.com/anishpandey7659/Arxiv-Research-Copilot
+- Category: AI / RAG
+- Technologies: Python, FastAPI, OpenSearch, LiteLLM, Docling, Langfuse, Logfire
+
+An end-to-end agentic research assistant that automatically fetches, processes, indexes, and answers questions about ArXiv research papers.
+
+Key capabilities:
+
+- Agentic RAG pipeline for searching, fetching, summarizing, and answering questions about research papers.
+- Automated document ingestion using Docling, PDF parsing, section-based chunking, embeddings, and indexing.
+- Hybrid retrieval combining BM25 and vector search.
+- Multi-layer AI guardrails using rate limiting, regex filtering, and LLM-based safety checks.
+- Provider-agnostic LLM routing through LiteLLM.
+- Observability, tracing, latency monitoring, and token usage tracking using Langfuse and Logfire.
+- Parallel paper downloading and indexing to optimize ingestion.
+
+Project link: https://github.com/anishpandey7659/Arxiv-Research-Copilot
+
+### 2. JobPilot AI — JobMatch Agent
+
+- Repository: https://github.com/anishpandey7659/JobPilot-AI
+- Category: AI / Agents
+- Technologies: Python, LangGraph, Langfuse
+
+An AI-powered job search agent that finds, ranks, and refines job listings and tailors resumes for selected roles.
+
+Key capabilities:
+
+- Multi-node LangGraph workflow for job fetching, ranking, query reformulation, resume tailoring, and validation.
+- Automatic query reformulation that repeats job searches when ranked results are weak.
+- Conditional entry routing to support job search and resume tailoring modes within a single graph.
+
+Project link: https://github.com/anishpandey7659/JobPilot-AI
+
+## Engineering Philosophy
+
+### Building Scalable Systems with Modern Tools
+
+I build practical tools for today's problems and intelligent systems for tomorrow, focusing on scalable architectures, reliable AI workflows, and useful applications of modern technologies.
+
+### Engineering Ideas into Useful Systems
+
+My approach combines AI engineering, backend development, and software engineering principles to turn complex ideas into maintainable, production-oriented applications.
+
+## Professional Links
+
+- GitHub: https://github.com/anishpandey7659
+- LinkedIn: https://www.linkedin.com/in/anish-pandey-9235a32a6/
+- Resume: https://drive.google.com/file/d/1wX2LBXpekmLOwetE0qiwRrjwCRoOKy3q/view?usp=sharing
+
+## Contact and Opportunities
+
+Open to AI engineering opportunities, collaborations, and discussions involving Agentic AI, LLM applications, RAG systems, and scalable backend architectures.
+
+Visit the portfolio website or connect through LinkedIn and GitHub for more information.
