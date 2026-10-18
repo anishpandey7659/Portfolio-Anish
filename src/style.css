@@ -42,7 +42,7 @@ body {
   background-image:
     radial-gradient(circle at 50% 25%, rgba(25, 25, 25, 0.45) 0%, rgba(3, 3, 3, 0.98) 75%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(3, 3, 3, 0.95) 100%),
-    url('/frames_webp/frame_000001.webp');
+    url('/public/Asset/blur-bg.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
