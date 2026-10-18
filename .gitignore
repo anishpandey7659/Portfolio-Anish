@@ -29,3 +29,7 @@ Thumbs.db
 
 
 video_frames_24fps_1080p.zip
+
+
+# Production build
+dist/
