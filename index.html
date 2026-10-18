@@ -44,10 +44,10 @@
           <button class="nav-link" data-target="contact">CONTACT</button>
         </nav>
 
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-        </button>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
       </div>
     </header>
 
@@ -72,6 +72,7 @@
             muted
             playsinline
             preload="auto"
+            poster="/Asset/hero_poster.jpg"
           >
             <source src="/Asset/hero_background.webm" type="video/webm" />
             <source src="/Asset/hero_video.mp4" type="video/mp4" />
@@ -164,17 +165,25 @@
         </div>
       </section>
 
-      <!-- 2. ABOUT SECTION -->
-  <section class="page-section section-about" id="about">
-    <div class="ab-wrap">
-      <!-- Left column -->
-      <div class="ab-left">
+
+    <!-- 2. ABOUT SECTION -->
+    <section class="page-section section-about" id="about">
+      <div class="ab-wrap">
+
         <div class="ab-top">
           <span>01</span>
           <span>/</span>
           <span>ABOUT</span>
           <span class="ab-line"></span>
         </div>
+
+        <figure class="ab-photo">
+          <img src="/Asset/anish.jpeg" alt="Anish Pandey" loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="ab-cap-bar"></span>
+            <span>CURIOUS BY DEFAULT.<br />BUILT THROUGH PRACTICE.</span>
+          </figcaption>
+        </figure>
 
         <div class="ab-main">
           <p class="ab-eyebrow">A LITTLE ABOUT ME</p>
@@ -183,27 +192,29 @@
           </h2>
 
           <p class="ab-text">
-          I’m an AI engineer focused on building practical, scalable, and intelligent AI systems. 
-          I enjoy working across Agentic AI and LLM applications — turning complex problems into reliable solutions through autonomous agents, RAG pipelines, and multi-agent workflows.
+            I’m an AI engineer focused on building practical, scalable systems.
+            I work across agentic AI and LLM applications, turning complex problems
+            into reliable solutions with autonomous agents, RAG pipelines, and
+            multi-agent workflows.
           </p>
           <p class="ab-text">
-            I care about clean architecture, production-ready AI, and learning by building.
+            I care about clean architecture, production-ready code, and learning by building.
           </p>
 
           <div class="ab-pillars">
             <div class="ab-pillar">
               <span class="ab-pillar-num">01 /</span>
-              <h3>Backend &amp; Systems</h3>
+              <h3>Agentic AI</h3>
               <i></i>
             </div>
             <div class="ab-pillar">
               <span class="ab-pillar-num">02 /</span>
-              <h3>Applied AI</h3>
+              <h3>RAG Systems</h3>
               <i></i>
             </div>
             <div class="ab-pillar">
               <span class="ab-pillar-num">03 /</span>
-              <h3>Product Thinking</h3>
+              <h3>Production AI</h3>
               <i></i>
             </div>
           </div>
@@ -212,167 +223,165 @@
         <div class="ab-bottom">
           <span>BUILD WITH INTENT.</span>
           <a href="#projects" class="ab-more" data-scroll="projects">
-            MORE ABOUT MY JOURNEY
+            VIEW MY WORK
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="8 7 17 7 17 16"></polyline>
             </svg>
           </a>
         </div>
-      </div>
 
-      <!-- Right column: photo -->
-      <figure class="ab-photo">
-        <img src="/Asset/anish.jpeg" alt="Anish Pandey" />
-        <figcaption>
-          <span class="ab-cap-bar"></span>
-          <span>CURIOUS BY DEFAULT.<br />BUILT THROUGH PRACTICE.</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-     <!-- 3. PROJECTS SECTION -->
-    <section class="page-section section-projects" id="projects">
-      <div class="pj-wrap">
-        <div class="pj-top">
-          <span>04</span><span>/</span><span>PROJECTS</span>
-          <span class="pj-top-line"></span>
-        </div>
-
-        <!-- Header -->
-        <div class="pj-head">
-          <div class="pj-head-left">
-            <p class="pj-eyebrow">FEATURED PROJECTS</p>
-            <h2 class="pj-title">Building ideas into<br /><em>real-world systems.</em></h2>
-            <p class="pj-intro">
-              A collection of projects where I turn concepts into scalable,
-              production-ready applications using modern technologies,
-              AI and efficient architectures.
-            </p>
-          </div>
-          <div class="pj-head-right">
-            <p class="pj-quote-caps">SOME PROJECTS<br />SOLVE PROBLEMS.<br />OTHERS BUILD<br />WHAT’S NEXT.</p>
-            <span class="pj-dash"></span>
-            <p class="pj-quote">I build both — practical tools<br />for today and intelligent systems<br />for tomorrow.</p>
-          </div>
-        </div>
-
-        <!-- Cards -->
-        <div class="pj-grid">
-          <!-- Project 1 -->
-          <article class="pj-card">
-            <div class="pj-card-top">
-              <span>AI / RAG</span>
-              <span class="pj-card-line"></span>
-              <span class="pj-count">01 / 02</span>
-            </div>
-
-            <h3 class="pj-name">ArXiv Copilot <span class="pj-sep"></span><em>Agentic Research Assistant</em></h3>
-
-            <a class="pj-repo" href="https://github.com/anishpandey7659/Arxiv-Research-Copilot" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              <span>github/Arxiv-Research-Copilot</span>
-              <svg class="pj-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
-            </a>
-
-            <div class="pj-tags">
-              <span>Python</span><span>FastAPI</span><span>OpenSearch</span><span>LiteLLM</span><span>Docling</span><span>Langfuse</span><span>Logfire</span>
-            </div>
-
-            <p class="pj-desc">
-              Built an end-to-end RAG-based agentic research assistant that automatically
-              fetches, processes, indexes, and answers questions over ArXiv research papers.
-            </p>
-
-            <div class="pj-bullets">
-              <ul>
-                <li>Developed an agentic RAG pipeline for searching, fetching, summarizing, and answering questions from ArXiv papers.</li>
-                <li>Built an automated ingestion pipeline using Docling for PDF parsing, section-based chunking, embeddings, and indexing.</li>
-                <li>Implemented hybrid retrieval using BM25 + vector search to improve search relevance.</li>
-                <li>Designed multi-layer AI guardrails with rate limiting, regex filtering, and LLM-based safety checks.</li>
-              </ul>
-              <ul>
-                <li>Integrated LiteLLM for provider-agnostic LLM routing.</li>
-                <li>Added Langfuse and Logfire for tracing, observability, latency monitoring, and token usage tracking.</li>
-                <li>Optimized ingestion using parallel paper downloading and indexing.</li>
-              </ul>
-            </div>
-
-            <div class="pj-card-foot">
-              <a class="pj-view" href="https://github.com/anishpandey7659/Arxiv-Research-Copilot" target="_blank" rel="noopener noreferrer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
-                VIEW PROJECT
-              </a>
-              <div class="pj-icons">
-                <a href="https://github.com/anishpandey7659/Arxiv-Research-Copilot" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="pj-card">
-            <div class="pj-card-top">
-              <span>AI / AGENTS</span>
-              <span class="pj-card-line"></span>
-              <span class="pj-count">02 / 02</span>
-            </div>
-
-            <h3 class="pj-name">JobPilot AI <span class="pj-sep"></span><em>JobMatch Agent</em></h3>
-
-            <a class="pj-repo" href="https://github.com/anishpandey7659/JobPilot-AI" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              <span>github/JobPilot-AI</span>
-              <svg class="pj-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
-            </a>
-
-            <div class="pj-tags">
-              <span>Python</span><span>LangGraph</span><span>Langfuse</span>
-            </div>
-
-            <p class="pj-desc">
-              Built an AI-powered job search agent that finds, ranks, and refines job listings
-              and tailors resumes for selected roles.
-            </p>
-
-            <div class="pj-bullets">
-              <ul>
-                <li>Designed a multi-node LangGraph workflow for job fetching, ranking, query reformulation, resume tailoring, and validation.</li>
-                <li>Implemented an automatic query reformulation loop that re-runs the search when ranked results are weak.</li>
-                <li>Built a conditional entry router to support both job search and resume tailoring modes within a single graph.</li>
-              </ul>
-              <ul>
-                <li>Added a validation step to check tailored resume output before returning results.</li>
-                <li>Integrated Langfuse for end-to-end tracing and observability across graph nodes and LLM calls.</li>
-              </ul>
-            </div>
-
-            <div class="pj-card-foot">
-              <a class="pj-view" href="https://github.com/anishpandey7659/JobPilot-AI" target="_blank" rel="noopener noreferrer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
-                VIEW PROJECT
-              </a>
-              <div class="pj-icons">
-                <a href="https://github.com/anishpandey7659/JobPilot-AI" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Section footer -->
-        <div class="pj-bottom">
-          <span>FROM RESEARCH TO REAL IMPACT.</span>
-          <a href="#skills" class="pj-next" data-scroll="skills">
-            NEXT
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
-          </a>
-        </div>
       </div>
     </section>
+
+     <!-- 3. PROJECTS SECTION -->
+      <section class="page-section section-projects" id="projects">
+        <!-- Icon sprite (defined once, reused below) -->
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+          <symbol id="pj-gh" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></symbol>
+          <symbol id="pj-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></symbol>
+        </svg>
+
+        <div class="pj-wrap">
+          <div class="pj-top">
+            <span>02</span><span>/</span><span>PROJECTS</span>
+            <span class="pj-top-line"></span>
+          </div>
+
+          <!-- Header -->
+          <div class="pj-head">
+            <div class="pj-head-left">
+              <p class="pj-eyebrow">FEATURED PROJECTS</p>
+              <h2 class="pj-title">Building ideas into<br /><em>real-world systems.</em></h2>
+              <p class="pj-intro">
+                A collection of projects where I turn concepts into scalable,
+                production-ready applications using modern technologies,
+                AI and efficient architectures.
+              </p>
+            </div>
+            <div class="pj-head-right">
+              <p class="pj-quote-caps">SOME PROJECTS<br />SOLVE PROBLEMS.<br />OTHERS BUILD<br />WHAT’S NEXT.</p>
+              <span class="pj-dash"></span>
+              <p class="pj-quote">I build both — practical tools<br />for today and intelligent systems<br />for tomorrow.</p>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="pj-grid">
+
+            <!-- Project 1 -->
+            <article class="pj-card">
+              <div class="pj-card-top">
+                <span>AI / RAG</span>
+                <span class="pj-card-line"></span>
+                <span class="pj-count">01 / 02</span>
+              </div>
+
+              <h3 class="pj-name">ArXiv Copilot <span class="pj-sep"></span><em>Agentic Research Assistant</em></h3>
+
+              <a class="pj-repo" href="https://github.com/anishpandey7659/Arxiv-Research-Copilot" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" fill="currentColor"><use href="#pj-gh"/></svg>
+                <span>github/Arxiv-Research-Copilot</span>
+                <svg class="pj-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#pj-arrow"/></svg>
+              </a>
+
+              <div class="pj-tags">
+                <span>Python</span><span>FastAPI</span><span>OpenSearch</span><span>LiteLLM</span><span>Docling</span><span>Langfuse</span><span>Logfire</span>
+              </div>
+
+              <p class="pj-desc">
+                Built an end-to-end RAG-based agentic research assistant that automatically
+                fetches, processes, indexes, and answers questions over ArXiv research papers.
+              </p>
+
+              <div class="pj-bullets">
+                <ul>
+                  <li>Developed an agentic RAG pipeline for searching, fetching, summarizing, and answering questions from ArXiv papers.</li>
+                  <li>Built an automated ingestion pipeline using Docling for PDF parsing, section-based chunking, embeddings, and indexing.</li>
+                  <li>Implemented hybrid retrieval using BM25 + vector search to improve search relevance.</li>
+                  <li>Designed multi-layer AI guardrails with rate limiting, regex filtering, and LLM-based safety checks.</li>
+                </ul>
+                <ul>
+                  <li>Integrated LiteLLM for provider-agnostic LLM routing.</li>
+                  <li>Added Langfuse and Logfire for tracing, observability, latency monitoring, and token usage tracking.</li>
+                  <li>Optimized ingestion using parallel paper downloading and indexing.</li>
+                </ul>
+              </div>
+
+              <div class="pj-card-foot">
+                <a class="pj-view" href="https://github.com/anishpandey7659/Arxiv-Research-Copilot" target="_blank" rel="noopener noreferrer">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#pj-arrow"/></svg>
+                  VIEW PROJECT
+                </a>
+                <div class="pj-icons">
+                  <a href="https://github.com/anishpandey7659/Arxiv-Research-Copilot" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+                    <svg width="18" height="18" fill="currentColor"><use href="#pj-gh"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="pj-card">
+              <div class="pj-card-top">
+                <span>AI / AGENTS</span>
+                <span class="pj-card-line"></span>
+                <span class="pj-count">02 / 02</span>
+              </div>
+
+              <h3 class="pj-name">JobPilot AI <span class="pj-sep"></span><em>JobMatch Agent</em></h3>
+
+              <a class="pj-repo" href="https://github.com/anishpandey7659/JobPilot-AI" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" fill="currentColor"><use href="#pj-gh"/></svg>
+                <span>github/JobPilot-AI</span>
+                <svg class="pj-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#pj-arrow"/></svg>
+              </a>
+
+              <div class="pj-tags">
+                <span>Python</span><span>LangGraph</span><span>Langfuse</span>
+              </div>
+
+              <p class="pj-desc">
+                Built an AI-powered job search agent that finds, ranks, and refines job listings
+                and tailors resumes for selected roles.
+              </p>
+
+              <div class="pj-bullets">
+                <ul>
+                  <li>Designed a multi-node LangGraph workflow for job fetching, ranking, query reformulation, resume tailoring, and validation.</li>
+                  <li>Implemented an automatic query reformulation loop that re-runs the search when ranked results are weak.</li>
+                  <li>Built a conditional entry router to support both job search and resume tailoring modes within a single graph.</li>
+                </ul>
+                <ul>
+                  <li>Added a validation step to check tailored resume output before returning results.</li>
+                  <li>Integrated Langfuse for end-to-end tracing and observability across graph nodes and LLM calls.</li>
+                </ul>
+              </div>
+
+              <div class="pj-card-foot">
+                <a class="pj-view" href="https://github.com/anishpandey7659/JobPilot-AI" target="_blank" rel="noopener noreferrer">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#pj-arrow"/></svg>
+                  VIEW PROJECT
+                </a>
+                <div class="pj-icons">
+                  <a href="https://github.com/anishpandey7659/JobPilot-AI" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+                    <svg width="18" height="18" fill="currentColor"><use href="#pj-gh"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Section footer -->
+          <div class="pj-bottom">
+            <span>FROM RESEARCH TO REAL IMPACT.</span>
+            <a href="#skills" class="pj-next" data-scroll="skills">
+              NEXT
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#pj-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
 
 
      <!-- 4. SKILLS SECTION -->
@@ -407,7 +416,7 @@
               <svg viewBox="0 0 24 24"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
               <h3>LANGUAGES</h3>
             </div>
-            <div class="sk-pills"><span>Python</span><span>SQL</span><span>JavaScript</span></div>
+            <div class="sk-pills"><span>Python</span><span>C++</span><span>JavaScript</span></div>
           </div>
 
           <div class="sk-group">

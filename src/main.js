@@ -203,10 +203,29 @@ heroScrollBtn?.addEventListener('click', () => {
   scrollToSection('about');
 });
 
-// Mobile toggle
+
+// Mobile togger
+function setMenu(open) {
+  navMenu?.classList.toggle('open', open);
+  mobileToggle?.classList.toggle('open', open);
+  mobileToggle?.setAttribute('aria-expanded', String(open));
+}
+
 mobileToggle?.addEventListener('click', () => {
-  navMenu?.classList.toggle('open');
+  setMenu(!navMenu.classList.contains('open'));
 });
+
+// Close when tapping outside the menu
+document.addEventListener('click', (e) => {
+  if (
+    navMenu?.classList.contains('open') &&
+    !navMenu.contains(e.target) &&
+    !mobileToggle.contains(e.target)
+  ) {
+    setMenu(false);
+  }
+});
+
 
 // ==========================================================================
 // 7. Fast Asset Preloader
