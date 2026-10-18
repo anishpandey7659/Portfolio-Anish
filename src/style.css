@@ -1433,69 +1433,304 @@ html.lenis body {
   transform: translateX(4px);
 }
 
-/* Contact Section */
-.contact-lead {
-  font-size: 1.15rem;
-  line-height: 1.65;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin-bottom: 2.2rem;
+
+/* ==========================================================================
+   Contact Section (editorial layout)
+   ========================================================================== */
+.section-contact {
+  position: relative;
+  padding: 7rem 5.5rem 7rem;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.contact-links-grid {
+.ct-wrap {
+  width: 100%;
+  max-width: 1300px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+  column-gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
 }
 
-.contact-link-tile {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.3rem 1.6rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s ease;
+/* ---- Left column ---- */
+.ct-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.4rem;
 }
 
-.contact-link-tile:not(.no-hover):hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
+.ct-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 5.4vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin-bottom: 0.6rem;
 }
 
-.tile-icon {
-  font-size: 1.5rem;
+.ct-sub {
+  font-size: clamp(0.85rem, 1.25vw, 1.15rem);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.tile-info {
+.ct-underline {
+  display: block;
+  width: 54px;
+  height: 2px;
+  margin: 1rem 0 1.8rem;
+  background: #fff;
+}
+
+.ct-text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 2.4rem;
+}
+
+.ct-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 1.35rem;
 }
 
-.tile-title {
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  color: var(--text-dim);
-  text-transform: uppercase;
+.ct-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.tile-val {
-  font-size: 0.95rem;
+.ct-list svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ct-list svg.ct-fill {
+  fill: #fff;
+  stroke: none;
+}
+
+.ct-list li div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ct-list li span {
+  font-size: 0.7rem;
   font-weight: 500;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ct-list li a,
+.ct-list li p {
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.ct-list li a:hover {
   color: #fff;
 }
 
-.contact-footer-note {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.5rem;
-  font-size: 0.78rem;
-  color: var(--text-dim);
+/* ---- Right column: form ---- */
+.ct-right {
+  padding-top: 0.4rem;
+}
+
+.ct-form-head {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  margin-bottom: 2rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ct-form-head i {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ct-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.15rem 1.3rem;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: text;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.ct-field:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.ct-field:focus-within {
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.ct-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.ct-field input,
+.ct-field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.ct-field input::placeholder,
+.ct-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ct-field textarea {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.ct-field--msg {
+  min-height: 170px;
+}
+
+.ct-field.invalid {
+  border-color: #ff6b6b;
+}
+
+.ct-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.15rem;
+  margin-top: 0.3rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.ct-send:hover {
+  background: #fff;
+  color: #000;
+}
+
+.ct-send svg {
+  transition: transform 0.25s ease;
+}
+
+.ct-send:hover svg {
+  transform: translateX(4px);
+}
+
+.ct-status {
+  min-height: 1.2em;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Bottom left / right ---- */
+.ct-scroll {
+  position: absolute;
+  left: 4rem;
+  bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.ct-scroll i {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ct-scroll svg {
+  animation: bounceDown 1.8s infinite ease-in-out;
+}
+
+.ct-social {
+  position: absolute;
+  right: 4.5rem;
+  bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.ct-social a {
+  display: flex;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ct-social a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.ct-social i {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 
@@ -1571,7 +1806,7 @@ html.lenis body {
   }
 }
 
-
+/* SECTION ABOUT =========================================================== */
 @media (max-width: 1100px) {
   .section-about { padding: 6rem 2.5rem 4rem; }
   .ab-wrap {
@@ -1592,6 +1827,7 @@ html.lenis body {
 }
 
 
+/* SECTION PROJECT =========================================================== */
 @media (max-width: 1100px) {
   .section-projects { padding: 5.5rem 2.5rem 3rem; }
   .pj-grid { grid-template-columns: 1fr; }
@@ -1613,6 +1849,8 @@ html.lenis body {
 }
 
 
+
+/* SECTION SKILL  ====================================================*/
 @media (max-width: 1100px) {
   .section-skills { padding: 5.5rem 2.5rem 2.5rem; }
   .sk-head { flex-direction: column; gap: 2rem; }
@@ -1643,4 +1881,20 @@ html.lenis body {
   .sk-head-right { padding-left: 1.4rem; }
   .sk-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .sk-bottom b { margin: 0 0.6rem; }
+}
+
+/* SECTION CONTACT ======================================================= */
+@media (max-width: 1100px) {
+  .section-contact { padding: 6rem 2.5rem 9rem; }
+  .ct-wrap { grid-template-columns: 1fr; row-gap: 3.5rem; }
+  .ct-scroll { left: 2.5rem; bottom: 2.5rem; }
+  .ct-social { right: 2.5rem; bottom: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .section-contact { padding: 5.5rem 1.25rem 8rem; }
+  .ct-row { grid-template-columns: 1fr; }
+  .ct-scroll { left: 1.25rem; bottom: 1.8rem; }
+  .ct-social { right: 1.25rem; bottom: 1.8rem; gap: 1rem; }
+  .ct-sub { letter-spacing: 0.18em; }
 }

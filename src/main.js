@@ -215,6 +215,46 @@ function initPreloader() {
   }, 20);
 }
 
+
+
+// ==========================================================================
+// Contact form (opens the visitor's email app with the message filled in)
+// ==========================================================================
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
+
+contactForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const data = new FormData(contactForm);
+  const name = data.get('name').trim();
+  const email = data.get('email').trim();
+  const subject = data.get('subject').trim() || `Message from ${name}`;
+  const message = data.get('message').trim();
+
+  // Basic validation
+  let valid = true;
+  contactForm.querySelectorAll('[required]').forEach((input) => {
+    const ok = input.value.trim() && (input.type !== 'email' || /^\S+@\S+\.\S+$/.test(input.value));
+    input.closest('.ct-field').classList.toggle('invalid', !ok);
+    if (!ok) valid = false;
+  });
+
+  if (!valid) {
+    contactStatus.textContent = 'Please fill in the required fields correctly.';
+    return;
+  }
+
+  const body = `${message}\n\n— ${name} (${email})`;
+  window.location.href =
+    `mailto:anishpandey1232@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  contactStatus.textContent = 'Opening your email app…';
+  contactForm.reset();
+});
+
+
+
 // ==========================================================================
 // 8. Startup
 // ==========================================================================
