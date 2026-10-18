@@ -138,6 +138,26 @@ window.addEventListener(
   { passive: true }
 );
 
+
+// ==========================================================================
+// Blurred background (fades in once the hero is mostly scrolled past)
+// ==========================================================================
+const blurBg = document.getElementById('blur-bg');
+
+if (heroSection && blurBg) {
+  const blurObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        blurBg.classList.toggle('visible', entry.intersectionRatio < 0.6);
+      });
+    },
+    { threshold: [0, 0.6, 1] }
+  );
+  blurObserver.observe(heroSection);
+}
+
+
+
 // ==========================================================================
 // 5. Navigation & Button Interactions
 // ==========================================================================
@@ -252,6 +272,8 @@ contactForm?.addEventListener('submit', (e) => {
   contactStatus.textContent = 'Opening your email app…';
   contactForm.reset();
 });
+
+
 
 
 

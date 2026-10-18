@@ -140,6 +140,41 @@ html.lenis body {
   transition: width 0.1s ease-out;
 }
 
+
+/* ==========================================================================
+   Blurred hero video behind About / Projects / Skills / Contact
+   ========================================================================== */
+.blur-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #030303;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.blur-bg.visible {
+  opacity: 1;
+}
+
+.blur-bg-img {
+  position: absolute;
+  inset: -40px; /* extra room so blurred edges never show */
+  background: url('/Asset/blur-bg.png') center / cover no-repeat;
+  filter: grayscale(100%) blur(18px) brightness(0.55);
+  transform: scale(1.05);
+}
+
+.blur-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+
+
 /* ==========================================================================
    Fixed Header / Navbar
    ========================================================================== */
@@ -580,7 +615,7 @@ html.lenis body {
    ========================================================================== */
 .section-about {
   padding: 6.5rem 6rem 4.5rem;
-  background: rgba(0, 0, 0, 0.35);
+  background: transparent; 
 }
 
 .ab-wrap {
@@ -845,7 +880,7 @@ html.lenis body {
    ========================================================================== */
 .section-projects {
   padding: 5rem 4.5rem 5rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: transparent; 
 }
 
 .pj-wrap {
@@ -1189,7 +1224,7 @@ html.lenis body {
 .section-skills {
   min-height: auto;          /* add this: stops the forced full-screen height */
   padding: 4.5rem 4.5rem 4rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: transparent;
 }
 
 .sk-wrap {
@@ -1442,7 +1477,7 @@ html.lenis body {
   position: relative;
   min-height: auto;    
   padding: 8.5rem 5.5rem 5rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: transparent;
 }
 
 
@@ -2019,6 +2054,7 @@ html.lenis body {
   :root {
     --header-height: 70px;
   }
+  .blur-bg-img { filter: grayscale(100%) blur(10px) brightness(0.55); }
   .header-inner {
     padding: 0 1.5rem;
   }
