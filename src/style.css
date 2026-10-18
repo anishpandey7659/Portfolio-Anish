@@ -1661,6 +1661,20 @@ html.lenis body {
   color: #fff;
 }
 
+/* Keep autofilled fields dark instead of the browser's light highlight */
+.ct-field input:-webkit-autofill,
+.ct-field input:-webkit-autofill:hover,
+.ct-field input:-webkit-autofill:focus,
+.ct-field textarea:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #0a0a0a inset;
+  box-shadow: 0 0 0 1000px #0a0a0a inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+
+
 .ct-field input::placeholder,
 .ct-field textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -1679,6 +1693,8 @@ html.lenis body {
 .ct-field.invalid {
   border-color: #ff6b6b;
 }
+
+
 
 .ct-send {
   display: flex;
