@@ -138,6 +138,24 @@ Key capabilities:
 
 Project link: https://github.com/anishpandey7659/JobPilot-AI
 
+### 3. Retail Refund Governance (ReturnGuard) — AI-Powered Multi-Agent System
+
+- Repository: https://github.com/anishpandey7659/ai-retail-refund-governance
+- Category: AI / Multi-Agent Systems
+- Technologies: Python, LangGraph, PostgreSQL, Qdrant, Redis, ARQ, FastAPI, CLIP, CatBoost, Keycloak, MinIO
+
+A multi-agent AI system that automates e-commerce return assessments, evaluates fraud risks, and escalates complex cases for human review.
+
+Key capabilities:
+
+- Built a LangGraph multi-agent system with Data-Quality, Planner, Intake, Policy, Image, Behavior, Decision, and Explanation agents.
+- Implemented Qdrant hybrid RAG using dense search, BM25, and RRF for policy verification.
+- Integrated CLIP image analysis and CatBoost for evidence analysis and behavioral risk prediction.
+- Developed asynchronous workflows with FastAPI, ARQ, and Redis, deterministic safeguards and human-in-the-loop escalation.
+- Implemented Keycloak (OAuth2/PKCE) authentication with PostgreSQL and MinIO storage.
+
+Project link: https://github.com/anishpandey7659/ai-retail-refund-governance
+
 ## Engineering Philosophy
 
 ### Building Scalable Systems with Modern Tools
@@ -152,7 +170,7 @@ My approach combines AI engineering, backend development, and software engineeri
 
 - GitHub: https://github.com/anishpandey7659
 - LinkedIn: https://www.linkedin.com/in/anish-pandey-9235a32a6/
-- Resume: https://drive.google.com/file/d/1wX2LBXpekmLOwetE0qiwRrjwCRoOKy3q/view?usp=sharing
+- Resume: https://drive.google.com/file/d/1fisD2kDmb0gurDS1D8WeO_m33A9RUSqR/view
 
 ## Contact and Opportunities
 

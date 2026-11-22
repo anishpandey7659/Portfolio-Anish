@@ -49,7 +49,7 @@ function initHeroVideo() {
   heroBgVideo.playsInline = true;
 
   // Calmer, slower cinematic playback pace
-  heroBgVideo.playbackRate = 0.87;
+  heroBgVideo.playbackRate = 1;
 
   const playPromise = heroBgVideo.play();
   if (playPromise !== undefined) {

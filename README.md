@@ -19,7 +19,7 @@ A modern, high-performance portfolio website featuring a hardware-accelerated 24
   - **02 / FEATURED PROJECTS**:
     - **ArXiv Copilot** (Agentic Academic RAG with Docling & OpenSearch)
     - **JobPilot AI** (Multi-Node LangGraph Match Agent)
-    - **ReturnGuard** (Governed Multi-Agent AI Returns System with Hash-Chained Audit Logs)
+    - **ReturnGuard** (Retail Refund Governance | AI-Powered Multi-Agent System with LangGraph, Qdrant & FastAPI)
   - **03 / SKILLS**: Categorized badges across Agentic AI, RAG & Vector Stores, Backend/APIs, and DevOps.
   - **04 / CONTACT**: Direct reach out tiles, location, and copyright.
 
